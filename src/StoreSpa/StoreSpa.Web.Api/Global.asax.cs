@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Routing;
 
-namespace StoreSpa.Web.Ui
+namespace StoreSpa.Web.Api
 {
     public class WebApiApplication : System.Web.HttpApplication
     {
