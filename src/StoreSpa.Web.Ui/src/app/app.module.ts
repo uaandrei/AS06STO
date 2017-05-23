@@ -1,6 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from "@angular/router";
+import { FormsModule } from '@angular/forms';
 
 import { StoreAppMainComponent } from "./main/store-app-main.component";
 import { StoreAppNavComponent } from "./nav/store-app-nav.component";
@@ -10,13 +11,14 @@ import { ProductPreviewComponent } from "./product-list/product-preview/product-
 import { ProductViewComponent } from "./product-list/product-view/product-view.component";
 import { routes } from "./routing/app.routing";
 import { StoreAppHomeComponent } from "./store-app-home.component";
+import { ProductNewComponent } from "./product-list/product-new/product-new.component";
 
 
 @NgModule({
-  imports:      [ BrowserModule, RouterModule.forRoot(routes) ],
+  imports:      [ BrowserModule, FormsModule, RouterModule.forRoot(routes) ],
   declarations: [ 
     StoreAppMainComponent, StoreAppNavComponent, StoreAppHomeComponent,
-    ProductListComponent, ProductPreviewComponent, ProductViewComponent
+    ProductListComponent, ProductPreviewComponent, ProductViewComponent, ProductNewComponent
   ],
   bootstrap:    [ StoreAppMainComponent ],
   providers: [ ProductService ]

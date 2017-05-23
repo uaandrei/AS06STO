@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreSpa.Web.Api", "StoreSp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreSpa.Business.Tests", "StoreSpa.Business.Tests\StoreSpa.Business.Tests.csproj", "{F4A33E3E-62CE-4B3D-91F5-4AF8F220DCE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreSpa.DataAccess", "StoreSpa.DataAccess\StoreSpa.DataAccess.csproj", "{1A5361DD-90E8-4A02-810E-3108626AA845}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreSpa.Business", "StoreSpa.Business\StoreSpa.Business.csproj", "{57282040-CF0B-4F95-A3C2-2F5AD248B39F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{F4A33E3E-62CE-4B3D-91F5-4AF8F220DCE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F4A33E3E-62CE-4B3D-91F5-4AF8F220DCE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F4A33E3E-62CE-4B3D-91F5-4AF8F220DCE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A5361DD-90E8-4A02-810E-3108626AA845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A5361DD-90E8-4A02-810E-3108626AA845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A5361DD-90E8-4A02-810E-3108626AA845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A5361DD-90E8-4A02-810E-3108626AA845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57282040-CF0B-4F95-A3C2-2F5AD248B39F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57282040-CF0B-4F95-A3C2-2F5AD248B39F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57282040-CF0B-4F95-A3C2-2F5AD248B39F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57282040-CF0B-4F95-A3C2-2F5AD248B39F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
