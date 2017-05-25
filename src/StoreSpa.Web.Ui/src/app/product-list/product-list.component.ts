@@ -32,6 +32,6 @@ export class ProductListComponent implements OnInit {
     }
 
     public LoadProducts(): void {
-        this.products = this.productService.GetProducts();
+        this.productService.GetProducts().then(p => this.products = p);
     }
 }

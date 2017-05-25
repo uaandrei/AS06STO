@@ -23,7 +23,7 @@ export class ProductViewComponent implements OnInit, OnDestroy {
             (params: any) => {
                 if(params.hasOwnProperty('id')) {
                     this.productId = params['id'];
-                    this.product = this.productService.GetProduct(this.productId);
+                    //this.product = this.productService.GetProduct(this.productId);
                 }
             }
         );

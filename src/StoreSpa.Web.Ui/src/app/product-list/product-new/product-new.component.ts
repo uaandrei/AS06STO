@@ -17,11 +17,11 @@ export class ProductNewComponent implements OnInit {
     ) { }
 
     ngOnInit(): void {
-        this.newProductModel = new Product("", "");
+        this.newProductModel = new Product("", 0.00, "");
     }
 
     onAdd(product: Product) {
-        var newProduct = new Product(product.id, product.name);
+        var newProduct = new Product(product.Name, product.Price, product.Description);
         this.productService.AddProduct(newProduct);
         this.router.navigate(["/list"])
     }

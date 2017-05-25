@@ -1,26 +1,34 @@
 import { Injectable } from "@angular/core";
+import { Http, Response } from '@angular/http';
+
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/operator/catch';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
 
 import { Product } from "../models/product";
 
 @Injectable()
 export class ProductService {
-    products = [
-        new Product("1", "product 1"),
-        new Product("2", "product 2"),
-        new Product("3", "product 3"),
-        new Product("4", "product 4"),
-        new Product("5", "product 5")
-    ];
+    apiGetUrl = "http://localhost:31252/api/product/";
 
-    public GetProducts(): Product[] {
-        return this.products;
+    constructor(private http: Http) { }
+
+    public GetProducts(): Promise<Product[]> {
+        return this.http.get(this.apiGetUrl).toPromise()
+                .then(
+                    r => r.json() as Product[]
+                )
+                .catch((err) => { 
+                    console.log(err); 
+                });
     }
 
     public GetProduct(id: String) {
-        return this.products.find(p => p.id === id);
+        return "";
     }
 
     public AddProduct(product: Product) {
-        this.products.push(product);
+
     }
 }

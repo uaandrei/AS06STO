@@ -23,7 +23,7 @@ namespace StoreSpa.Business.Services
                     Id = p.Id.ToString(),
                     Description = p.Description,
                     Name = p.Name,
-                    Price = p.Price
+                    Price = p.Price.Value
                 }
             );
         }
