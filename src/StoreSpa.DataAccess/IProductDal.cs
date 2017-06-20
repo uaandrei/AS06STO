@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
-namespace StoreSpa.DataAccess
-{
-    public interface IProductDal
-    {
+namespace StoreSpa.DataAccess {
+    public interface IProductDal {
         IEnumerable<Product> GetProducts();
         void Add(Product product);
     }

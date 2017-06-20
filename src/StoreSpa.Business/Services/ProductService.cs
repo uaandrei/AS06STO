@@ -4,22 +4,17 @@ using System;
 using System.Linq;
 using System.Collections.Generic;
 
-namespace StoreSpa.Business.Services
-{
-    public class ProductService : IProductService
-    {
+namespace StoreSpa.Business.Services {
+    public class ProductService : IProductService {
         private IProductDal _dal;
 
-        public ProductService(IProductDal dal)
-        {
+        public ProductService(IProductDal dal) {
             _dal = dal;
         }
 
-        public IEnumerable<ProductModel> GetProducts()
-        {
+        public IEnumerable<ProductModel> GetProducts() {
             return _dal.GetProducts().Select(p =>
-                new ProductModel
-                {
+                new ProductModel {
                     Id = p.Id.ToString(),
                     Description = p.Description,
                     Name = p.Name,
@@ -28,10 +23,8 @@ namespace StoreSpa.Business.Services
             );
         }
 
-        public void Add(ProductModel value)
-        {
-            _dal.Add(new Product
-            {
+        public void Add(ProductModel value) {
+            _dal.Add(new Product {
                 Description = value.Description,
                 Name = value.Name,
                 Price = value.Price
