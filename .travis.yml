@@ -3,8 +3,6 @@ solution: ./src/StoreSpa.sln
 mono: none
 dotnet: 1.0.4
 dist: trusty
-install:
-- nuget install xunit.runners -Version 1.9.2 -OutputDirectory testrunner
 script:
  - dotnet restore ./src/StoreSpa.sln
  - xbuild /p:Configuration=Release ./src/StoreSpa.sln
