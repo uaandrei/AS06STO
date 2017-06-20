@@ -1,10 +1,7 @@
 language: csharp
 solution: ./src/StoreSpa.sln
-
-matrix:
-  include:
-    - dotnet: 1.0.4
-      mono: none
-      dist: trusty
-      env: DOTNETCORE=1  # optional, can be used to take different code paths in your script
-    - mono: latest
+mono: none
+dotnet: 1.0.4
+dist: trusty
+script:
+ - dotnet restore
