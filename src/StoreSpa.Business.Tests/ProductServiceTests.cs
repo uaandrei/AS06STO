@@ -23,7 +23,7 @@ namespace StoreSpa.Business.Tests {
             _sut.Add(newProduct2);
 
             // assert
-            Assert.Equal(2, _dummyDal.Count);
+            Assert.Equal(1, _dummyDal.Count);
         }
     }
 }
