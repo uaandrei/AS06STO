@@ -5,7 +5,7 @@ namespace StoreSpa.DataAccess {
         public DbSet<Product> Products { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) {
-            optionsBuilder.UseSqlite("Data Source=products.db");
+            optionsBuilder.UseSqlite(@"Data Source=..\..\..\..\..\db\products.db");
         }
     }
 }

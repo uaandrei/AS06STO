@@ -20,23 +20,29 @@ namespace StoreSpa.WebApi.Controllers {
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id) {
-            return "value";
+        public ProductModel Get(string id) {
+            return _productService.GetProduct(id);
         }
 
         // POST api/values
         [HttpPost]
-        public void Post([FromBody]string value) {
+        public ProductModel Post([FromBody]ProductModel value) {
+            var product = _productService.Add(value);
+            return product;
         }
 
         // PUT api/values/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody]string value) {
+        public ProductModel Put(string id, [FromBody]ProductModelChanges value) {
+            var product = _productService.Update(id, value);
+            return product;
         }
 
         // DELETE api/values/5
         [HttpDelete("{id}")]
-        public void Delete(int id) {
+        public ProductModel Delete(string id) {
+            var product = _productService.Delete(id);
+            return product;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using StoreSpa.Business.Models;
+﻿using StoreSpa.Business.Mappers;
+using StoreSpa.Business.Models;
 using StoreSpa.Business.Services;
 using Xunit;
 
@@ -9,7 +10,7 @@ namespace StoreSpa.Business.Tests {
 
         public ProductServiceTests() {
             _dummyDal = new DummyProductDal();
-            _sut = new ProductService(_dummyDal);
+            _sut = new ProductService(_dummyDal, new ProductMapper());
         }
 
         [Fact]

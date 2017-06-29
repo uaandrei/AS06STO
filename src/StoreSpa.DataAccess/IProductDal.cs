@@ -3,6 +3,9 @@
 namespace StoreSpa.DataAccess {
     public interface IProductDal {
         IEnumerable<Product> GetProducts();
-        void Add(Product product);
+        Product Add(Product product);
+        Product Get(string id);
+        Product Delete(string id);
+        Product Update(Product changes);
     }
 }

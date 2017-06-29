@@ -3,8 +3,10 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using StoreSpa.Business.Mappers;
 using StoreSpa.Business.Services;
 using StoreSpa.DataAccess;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace StoreSpa.WebApi {
     public class Startup {
@@ -24,20 +26,31 @@ namespace StoreSpa.WebApi {
             // Add framework services.
             services.AddMvc();
 
+            services.AddSwaggerGen(c => {
+                c.SwaggerDoc("v1", new Info { Title = "My API", Version = "v1" });
+            });
+
             RegisterServices(services);
         }
 
         private static void RegisterServices(IServiceCollection services) {
             services.AddTransient<IProductService, ProductService>();
             services.AddTransient<IProductDal, ProductDal>();
+            services.AddTransient<IProductMapper, ProductMapper>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory) {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+            
+            app.UseSwagger();
 
-            app.UseMvc();
+            app.UseMvc(); 
+
+            app.UseSwaggerUI(c => {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
         }
     }
 }

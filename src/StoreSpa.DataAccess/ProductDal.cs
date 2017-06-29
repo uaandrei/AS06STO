@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StoreSpa.DataAccess {
     public class ProductDal : IProductDal {
@@ -12,10 +9,37 @@ namespace StoreSpa.DataAccess {
             }
         }
 
-        public void Add(Product product) {
+        public Product Add(Product product) {
             using (var context = new ProductContext()) {
                 context.Products.Add(product);
                 context.SaveChanges();
+            }
+            return product;
+        }
+
+        public Product Get(string id) {
+            using (var context = new ProductContext()) {
+                return context.Products.Find(id);
+            }
+        }
+
+        public Product Delete(string id) {
+            using (var context = new ProductContext()) {
+                var data = context.Products.Find(id);
+                context.Products.Remove(data);
+                context.SaveChanges();
+                return data;
+            }
+        }
+
+        public Product Update(Product changes) {
+            using (var context = new ProductContext()) {
+                var data = context.Products.Find(changes.Id);
+                data.Description = changes.Description;
+                data.Name = changes.Name;
+                data.Price = changes.Price;
+                context.SaveChanges();
+                return data;
             }
         }
     }
