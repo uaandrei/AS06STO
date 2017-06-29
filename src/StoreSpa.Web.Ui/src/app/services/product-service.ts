@@ -10,7 +10,7 @@ import { Product } from "../models/product";
 
 @Injectable()
 export class ProductService {
-    apiGetUrl = "http://localhost:31252/api/product/";
+    apiGetUrl = "http://localhost:34809/api/product/";
 
     constructor(private http: Http) { }
 

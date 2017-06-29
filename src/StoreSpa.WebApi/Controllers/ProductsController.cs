@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Mvc;
 using StoreSpa.Business.Models;
 using StoreSpa.Business.Services;
 using System.Collections.Generic;
 
 namespace StoreSpa.WebApi.Controllers {
     [Route("api/[controller]")]
+    [EnableCors("*")]
     public class ProductsController : Controller {
         private readonly IProductService _productService;
 
