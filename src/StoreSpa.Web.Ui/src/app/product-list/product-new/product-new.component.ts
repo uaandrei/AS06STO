@@ -21,7 +21,7 @@ export class ProductNewComponent implements OnInit {
     }
 
     onAdd(product: Product) {
-        var newProduct = new Product(product.Name, product.Price, product.Description);
+        var newProduct = new Product(product.name, product.price, product.description);
         this.productService.AddProduct(newProduct);
         this.router.navigate(["/list"])
     }

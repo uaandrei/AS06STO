@@ -19,13 +19,13 @@ namespace StoreSpa.DataAccess {
 
         public Product Get(string id) {
             using (var context = new ProductContext()) {
-                return context.Products.Find(id);
+                return context.Products.Single(p => p.Id.ToString().Equals(id));
             }
         }
 
         public Product Delete(string id) {
             using (var context = new ProductContext()) {
-                var data = context.Products.Find(id);
+                var data = context.Products.Single(p => p.Id.ToString().Equals(id));
                 context.Products.Remove(data);
                 context.SaveChanges();
                 return data;
@@ -34,7 +34,7 @@ namespace StoreSpa.DataAccess {
 
         public Product Update(Product changes) {
             using (var context = new ProductContext()) {
-                var data = context.Products.Find(changes.Id);
+                var data = context.Products.Single(p => p.Id.ToString().Equals(changes.Id));
                 data.Description = changes.Description;
                 data.Name = changes.Name;
                 data.Price = changes.Price;

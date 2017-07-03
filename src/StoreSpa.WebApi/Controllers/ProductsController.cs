@@ -6,7 +6,6 @@ using System.Collections.Generic;
 
 namespace StoreSpa.WebApi.Controllers {
     [Route("api/[controller]")]
-    [EnableCors("*")]
     public class ProductsController : Controller {
         private readonly IProductService _productService;
 

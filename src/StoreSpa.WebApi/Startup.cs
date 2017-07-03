@@ -43,6 +43,10 @@ namespace StoreSpa.WebApi {
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory) {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+
+            app.UseCors(options => 
+                options.WithOrigins("http://localhost:3000").AllowAnyMethod().AllowAnyHeader()
+            );
             
             app.UseSwagger();
 

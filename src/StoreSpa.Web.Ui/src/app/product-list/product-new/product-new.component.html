@@ -1,15 +1,19 @@
 <form #f="ngForm">
     <div class="row form-group">
+        <label for="id">id</label>
+        <input type="text" class="form-control" [ngModel]="newProductModel.id" name="id" id="id">
+    </div>
+    <div class="row form-group">
         <label for="name_new">name</label>
-        <input type="text" class="form-control" [ngModel]="newProductModel.Name" #name="ngModel" name="name" id="name_new">
+        <input type="text" class="form-control" [ngModel]="newProductModel.name" name="name" id="name_new">
     </div>
     <div class="row form-group">
         <label for="price_new">price(RON)</label>
-        <input type="number" step="0.01" class="form-control" [ngModel]="newProductModel.Price" #name="ngModel" name="price" id="price_new">
+        <input type="number" step="0.01" [ngModel]="newProductModel.price" class="form-control" name="price" id="price_new">
     </div>
     <div class="row form-group">
         <label for="description_new">description</label>
-        <textarea class="form-control" [ngModel]="newProductModel.Description" #id="ngModel" name="description" id="description_new"></textarea>
+        <textarea class="form-control" [ngModel]="newProductModel.description" name="description" id="description_new"></textarea>
     </div>
     <button class="btn btn-default" (click)="onAdd(f.value)">Add</button>
 </form>

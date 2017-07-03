@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
-import { Http, Response } from '@angular/http';
+import { Http, Headers } from '@angular/http';
+
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
@@ -10,25 +11,22 @@ import { Product } from "../models/product";
 
 @Injectable()
 export class ProductService {
-    apiGetUrl = "http://localhost:34809/api/product/";
+    apiUrl = "http://localhost:34809/api/products/";
 
     constructor(private http: Http) { }
 
-    public GetProducts(): Promise<Product[]> {
-        return this.http.get(this.apiGetUrl).toPromise()
-                .then(
-                    r => r.json() as Product[]
-                )
-                .catch((err) => { 
-                    console.log(err); 
-                });
+    public GetProducts(): Observable<Product[]> {
+        return this.http.get(this.apiUrl).map(
+            r => r.json() as Product[]
+        );
     }
 
-    public GetProduct(id: String) {
-        return "";
+    public GetProduct(id: String): Observable<Product> {
+        return this.http.get(this.apiUrl + id).map(r => r.json() as Product);
     }
 
-    public AddProduct(product: Product) {
-
+    public AddProduct(product: Product): void {
+        const headers = new Headers({ 'content-type': 'application/json' });
+        this.http.post(this.apiUrl, JSON.stringify(product), { headers: headers }).toPromise();
     }
 }
