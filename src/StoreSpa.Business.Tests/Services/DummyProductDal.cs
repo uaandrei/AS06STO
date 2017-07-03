@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System;
 using System.Linq;
 
-namespace StoreSpa.Business.Tests {
+namespace StoreSpa.Business.Tests.Services {
     public class DummyProductDal : IProductDal {
         private List<Product> _products = new List<Product>();
 

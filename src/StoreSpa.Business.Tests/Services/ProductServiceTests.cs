@@ -4,7 +4,7 @@ using StoreSpa.Business.Services;
 using System.Linq;
 using Xunit;
 
-namespace StoreSpa.Business.Tests {
+namespace StoreSpa.Business.Tests.Services {
     public class ProductServiceTests {
         private readonly DummyProductDal _dummyDal;
         private readonly ProductService _sut;
