@@ -1,0 +1,8 @@
+version: '2.1'
+
+services:
+  storespa.webapi:
+    image: storespa.webapi
+    build:
+      context: ./StoreSpa.WebApi
+      dockerfile: Dockerfile
