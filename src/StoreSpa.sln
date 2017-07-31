@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.14
+VisualStudioVersion = 15.0.26430.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreSpa.DataAccess", "StoreSpa.DataAccess\StoreSpa.DataAccess.csproj", "{2986C5AA-F5CB-484E-948F-3840891C6773}"
 EndProject
@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreSpa.Business", "StoreS
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StoreSpa.WebApi", "StoreSpa.WebApi\StoreSpa.WebApi.csproj", "{6E0A0A78-ACCE-4869-9A20-DD471DF14BDE}"
 EndProject
-Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{910BABE3-B7EF-4196-A3A3-58CD74AE1C44}"
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2AF4816E-28CC-4F18-9C04-30CB97F0458F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{6E0A0A78-ACCE-4869-9A20-DD471DF14BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E0A0A78-ACCE-4869-9A20-DD471DF14BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E0A0A78-ACCE-4869-9A20-DD471DF14BDE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{910BABE3-B7EF-4196-A3A3-58CD74AE1C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{910BABE3-B7EF-4196-A3A3-58CD74AE1C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{910BABE3-B7EF-4196-A3A3-58CD74AE1C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{910BABE3-B7EF-4196-A3A3-58CD74AE1C44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AF4816E-28CC-4F18-9C04-30CB97F0458F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AF4816E-28CC-4F18-9C04-30CB97F0458F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AF4816E-28CC-4F18-9C04-30CB97F0458F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AF4816E-28CC-4F18-9C04-30CB97F0458F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

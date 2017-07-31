@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" Sdk="Microsoft.Docker.Sdk">
   <PropertyGroup Label="Globals">
-    <ProjectGuid>910babe3-b7ef-4196-a3a3-58cd74ae1c44</ProjectGuid>
+    <ProjectGuid>2af4816e-28cc-4f18-9c04-30cb97f0458f</ProjectGuid>
     <DockerLaunchBrowser>True</DockerLaunchBrowser>
     <DockerServiceUrl>http://localhost:{ServicePort}/swagger</DockerServiceUrl>
     <DockerServiceName>storespa.webapi</DockerServiceName>
