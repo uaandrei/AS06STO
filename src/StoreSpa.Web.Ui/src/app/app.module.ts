@@ -13,6 +13,8 @@ import { ProductViewComponent } from "./product-list/product-view/product-view.c
 import { routes } from "./routing/app.routing";
 import { StoreAppHomeComponent } from "./store-app-home.component";
 import { ProductNewComponent } from "./product-list/product-new/product-new.component";
+import { AuthService } from "./services/auth.service";
+import { AuthGuard } from "./guards/auth-guard.service";
 
 
 @NgModule({
@@ -22,6 +24,6 @@ import { ProductNewComponent } from "./product-list/product-new/product-new.comp
     ProductListComponent, ProductPreviewComponent, ProductViewComponent, ProductNewComponent
   ],
   bootstrap:    [ StoreAppMainComponent ],
-  providers: [ ProductService ]
+  providers: [ ProductService, AuthService, AuthGuard ]
 })
 export class AppModule { }
